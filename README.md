@@ -15,4 +15,4 @@ This folder contains the source JPG image files for the demo library. The images
 
 ### slideshow.db & slideshow.db-journal
 
-These files contain the data and should be placed at the same location as the imported Omnis library .lbs file.
+These SQLite database files contain the data and should be placed at the same location as the imported Omnis library .lbs file.
