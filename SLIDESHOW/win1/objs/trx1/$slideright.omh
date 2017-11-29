@@ -1,0 +1,18 @@
+If $cwind.$objs.slide2.$left>$cwind.$width
+	Do $cwind.$objs.slide2.$width.$assign(100)
+	Do $cwind.$objs.slide2.$left.$assign(-200)
+Else If $cwind.$objs.slide1.$left>$cwind.$width
+	Do $cwind.$objs.slide1.$width.$assign(100)
+	Do $cwind.$objs.slide1.$left.$assign(-200)
+End If
+If $cwind.$objs.slide2.$left>$cwind.$objs.slide1.$left
+	;  slide1 will be moving in from the left
+	Do $cwind.$objs.slide1.$left.$assign(-500)     ;; -$cwind.$objs.slide1.$width
+	Do $cwind.$objs.slide1.$path.$assign(iPath)
+	Do $cwind.$objs.trx1.$transform('slideright12')
+Else
+	;  slide2 will be moving in from the left
+	Do $cwind.$objs.slide2.$path.$assign(iPath)
+	Do $cwind.$objs.slide2.$left.$assign(-500)     ;; -$cwind.$objs.slide2.$width
+	Do $cwind.$objs.trx1.$transform('slideright21')
+End If

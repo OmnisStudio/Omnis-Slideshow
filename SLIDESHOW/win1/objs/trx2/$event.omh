@@ -1,0 +1,12 @@
+On evTransformComplete
+	;  Transformation is complete
+	If p2<>'restore'
+		If $cwind.$objs.eDesc.$left<0
+			Do $cwind.$objs.eDesc.$left.$assign($cwind.$width+1)
+		Else
+			Do $cwind.$objs.eDesc.$left.$assign(-500)
+		End If
+		Do $cobj.$transform('restore')
+	End If
+On evTransformBegin
+	;  Transformation has begun

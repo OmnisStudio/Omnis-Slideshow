@@ -1,0 +1,11 @@
+;  Starting positions for various window objects
+Do $cwind.$objs.slide1.$left.$assign(-100)
+Do $cwind.$objs.eTitle.$top.$assign(-50)
+Do $cwind.$objs.eDesc.$left.$assign(-500)
+
+Calculate lPath as replace(upp(sys(10)),'.LBS','.DB')
+If sys(6)='X'
+	Do FileOps.$converthfspathtoposixpath(lPath,lPath)
+End If
+Do cSess.$logon(lPath,'','','session1') Returns #F
+Do cSess.$newstatement() Returns cStat

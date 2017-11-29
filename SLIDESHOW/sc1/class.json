@@ -1,0 +1,20 @@
+{
+	"classtype": "kSchema",
+	"internalversion": 4,
+	"nextident": 32008,
+	"properties": {
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2014-07-08 11:04:24",
+		"createinstancewhensubtype": true,
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"moddate": "2014-07-08 11:14:37",
+		"servertablename": "slides",
+		"showascheckedout": false,
+		"userinfo": "",
+		"version": ""
+	}
+}

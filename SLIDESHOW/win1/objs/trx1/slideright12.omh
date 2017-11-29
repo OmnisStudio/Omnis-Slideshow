@@ -1,0 +1,13 @@
+;  move slide2 out to the right
+Do $iwindows.win1.$objs.slide2.$left.$assign($cwind.$width+1)
+Do $iwindows.win1.$objs.slide2.$height.$assign(220)
+
+;  move slide1 in from the left
+Do $iwindows.win1.$objs.slide1.$width.$assign(iRow.width)
+Do $iwindows.win1.$objs.slide1.$height.$assign(iRow.height)
+Do $iwindows.win1.$objs.slide1.$left.$assign(20)
+
+;  Move the title in to place
+;  wait 8
+Do $iwindows.win1.$objs.eTitle.$top.$assign(10)
+Do $iwindows.win1.$objs.eTitle.$left.$assign(10)

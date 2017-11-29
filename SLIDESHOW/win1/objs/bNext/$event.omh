@@ -1,0 +1,15 @@
+On evClick     ;; Event Parameters - pRow( Itemreference )
+	If iSliding=kTrue
+		Quit method
+	End If
+	Calculate iID as iID+1
+	Do cStat.$execdirect('select * from slides where id = @[iID]') Returns #F
+	Do cStat.$fetch(iRow) Returns status
+	If status<>kFetchOk
+		Calculate iID as 1
+		Do cStat.$execdirect('select * from slides where id = @[iID]') Returns #F
+		Do cStat.$fetch(iRow)
+	End If
+	Calculate iPath as replace(upp(sys(10)),'SLIDESHOW.LBS',iRow.pic)
+	Do $cwind.$objs.trx1.$slideright()
+	Do $cwind.$objs.trx2.$transform('offleft')

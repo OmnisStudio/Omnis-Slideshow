@@ -1,0 +1,14 @@
+On evClick     ;; Event Parameters - pRow( Itemreference )
+	If iSliding=kTrue
+		Quit method
+	End If
+	Calculate iID as iID-1
+	If iID<1
+		Do cStat.$execdirect('select max(id) from slides') Returns #F
+		Do cStat.$fetchinto(iID)
+	End If
+	Do cStat.$execdirect('select * from slides where id = @[iID]') Returns #F
+	Do cStat.$fetch(iRow)
+	Calculate iPath as replace(upp(sys(10)),'SLIDESHOW.LBS',iRow.pic)
+	Do $cwind.$objs.trx1.$slideleft()
+	Do $cwind.$objs.trx2.$transform('offright')

@@ -1,0 +1,11 @@
+On evTransformComplete
+	;  Transformation is complete
+	Calculate iSliding as kFalse
+On evTransformBegin
+	;  Transformation has begun
+	Calculate iSliding as kTrue
+	Do $cwind.$objs.eTitle.$top.$assign(-30)
+	Do $cwind.$objs.eTitle.$left.$assign(2)
+	Do $cwind.$objs.eTitle.$width.$assign((len(iRow.title)+2)*7)
+	Do $cwind.$objs.eTitle.$redraw()
+	Do $cwind.$objs.eDesc.$redraw()

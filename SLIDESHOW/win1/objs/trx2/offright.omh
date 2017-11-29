@@ -1,0 +1,1 @@
+Do $iwindows.win1.$objs.eDesc.$left.$assign($cwind.$width+1)
